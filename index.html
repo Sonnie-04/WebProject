@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fine Organic - Your Trusted Source for Organic Food</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="loading-overlay">
+  <div class="spinner"></div>
+  <p>Loading Your Dashboard...</p>
+</div>
+
+<!-- VIEW 1: LANDING PAGE -->
+<div id="landing-view" class="view active">
+  <header class="landing-header">
+    <a href="#" class="logo"><i class="fas fa-seedling"></i> Fine Organic</a>
+    <nav class="navbar"><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main class="landing-main">
+    <div class="landing-content">
+      <h1>Pure. Transparent. Organic.</h1>
+      <p>Connecting conscious consumers with trusted farmers through a secure and transparent supply chain.</p>
+    </div>
+    <div class="auth-container">
+      <!-- LOGIN FORM -->
+      <div id="login-form-container" class="auth-form active">
+        <form id="login-form"action="login.php" method="POST">
+          <h3>Member Login</h3>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Enter your email" class="box" required/>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Enter your password" class="box" required/>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-user-tag"></i>
+            <select name="role" class="box" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="consumer">Consumer</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="flex"><a href="#" id="forgot-password-link">Forgot password?</a></div>
+          <input type="submit" value="Login Now" class="btn"/>
+          <p>Don't have an account? <a href="#" id="show-signup-link">Create one</a></p>
+        </form>
+      </div>
+
+      <!-- SIGNUP FORM -->
+      <div id="signup-form-container" class="auth-form">
+        <form id="signup-form"action="signup.php" method="POST">
+          <h3>Create an Account</h3>
+          <input type="text" name="full_name" placeholder="Full Name" class="box" required/>
+          <input type="email" name="email" placeholder="Email Address" class="box" required/>
+          <input type="password" name="password" placeholder="Create Password" class="box" required/>
+          <input type="password" name="confirm_password" placeholder="Confirm Password" class="box" required/>
+          <select name="role" class="box" required>
+            <option value="" disabled selected>I am a...</option>
+            <option value="consumer">Consumer</option>
+            <option value="admin">Admin</option>
+          </select>
+          <input type="submit" value="Sign Up Now" class="btn"/>
+          <p>Already have an account? <a href="#" id="show-login-link">Login here</a></p>
+        </form>
+      </div>
+    </div>
+  </main>
+   <!-- About Section Starts -->
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> Us</h1>
+        <div class="row">
+            <div class="image">
+                <img src="Images\download20.jpg" alt="about us">
+            </div>
+            <div class="content">
+                <h3>What Makes Our Food Special?</h3>
+                <p>At Fine Organic, we believe that food is the foundation of a healthy life. Our mission is to connect you with nature's best, offering produce that is not only delicious but also nourishing and sustainably grown.</p>
+                <p>We partner with local farmers who share our commitment to organic practices, ensuring that every fruit and vegetable is cultivated without synthetic pesticides or fertilizers. From the farm to your table, we prioritize freshness, quality, and transparency.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends -->
+     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Fine Organic <i class="fas fa-leaf"></i></h3>
+                <p>Your daily source of fresh, healthy, and organic food.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#" class="links"><i class="fas fa-phone"></i> +254-123456789</a>
+                <a href="#" class="links"><i class="fas fa-envelope"></i> contact@fineorganic.com</a>
+                <a href="#" class="links"><i class="fas fa-map-marker-alt"></i> Silicon Valley, Kiambu</a>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#about" class="links"><i class="fas fa-arrow-right"></i>about</a>
+                <a href="#contacts" class="links"><i class="fas fa-arrow-right"></i> Contacts</a>
+            </div>
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>Subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+            </div>
+        </div>
+        <div class="credit">Created by <span>Musyoka Yvonne</span> | All Rights Reserved</div>
+    </footer>
+</div>
+
+<!-- VIEW 2: CONSUMER DASHBOARD -->
+<div id="consumer-view" class="view">
+  <header class="main-header">
+    <a href="#" class="logo"><i class="fas fa-seedling"></i> Fine Organic</a>
+    <nav class="navbar">
+      <a href="#features-section">Features</a>
+      <a href="#products-section">Products</a>
+      <a href="#categories-section">Categories</a>
+      <a href="#reviews-section">Reviews</a>
+    </nav>
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      <div class="fas fa-user" id="user-btn"></div>
+    </div>
+    <form class="search-form"><input type="search" id="search-box" placeholder="Search..."><label for="search-box" class="fas fa-search"></label></form>
+    <div class="shopping-cart">
+      <div class="cart-items-container"></div>
+      <div class="total">Total: $0.00</div>
+      <a href="#" class="btn checkout-btn">Checkout</a>
+    </div>
+    <div class="user-profile">
+      <h3>My Account</h3>
+      <p>Welcome, Consumer!</p>
+      <a href="#" class="btn logout-btn">Logout</a>
+    </div>
+  </header>
+  <main>
+    
+       <!-- FEATURES SECTION -->
+            <section class="features" id="features-section">
+                <h1 class="heading">Our <span>Features</span></h1>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="Images/download6.jpg" alt="feature">
+                        <h3>Fresh and Organic</h3>
+                        <p>We guarantee 100% organic products, free from harmful pesticides and chemicals.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="box">
+                        <img src="Images/download5.jpg" alt="feature">
+                        <h3>Fast Delivery</h3>
+                        <p>Get your fresh produce delivered to your home within 24 hours of ordering.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="box">
+                        <img src="Images/download9.jpg" alt="feature">
+                        <h3>Easy Payments</h3>
+                        <p>Secure and simple payment methods eg mobile wallet and credit card.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PRODUCTS SECTION -->
+            <section class="products" id="products-section">
+                <h1 class="heading">Our <span>Products</span></h1>
+                <div class="box-container">
+                    <div class="box" data-product-id="P001">
+                        <img src="Images/download31.png" alt="Apples">
+                        <h3>Apples</h3>
+                        <div class="price">Ksh60/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P002">
+                        <img src="Images/download2.jpg" alt="Onions">
+                        <h3>Onions</h3>
+                        <div class="price">Ksh70/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P003">
+                        <img src="Images/download7.jpg" alt="Fresh Carrots">
+                        <h3>Fresh Carrots</h3>
+                        <div class="price">Ksh100/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P004">
+                        <img src="Images/download1.jpg" alt="Fresh PawPaws">
+                        <h3>Fresh PawPaws</h3>
+                        <div class="price">Ksh80/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P005">
+                        <img src="Images/download4.jpg" alt="Avocados">
+                        <h3>Avocados</h3>
+                        <div class="price">Ksh80.Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P006">
+                        <img src="Images/download3.jpg" alt="Fresh Bananas">
+                        <h3>Fresh Bananas</h3>
+                        <div class="price">Ksh60/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P007">
+                        <img src="Images/download8.jpg" alt="Potatoes">
+                        <h3>Potatoes</h3>
+                        <div class="price">Ksh120/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P008">
+                        <img src="Images/download12.png" alt="Tomatoes">
+                        <h3>Tomatoes</h3>
+                        <div class="price">Ksh65/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P009">
+                        <img src="Images/download10.jpg" alt="Fresh Oranges">
+                        <h3>Fresh Oranges</h3>
+                        <div class="price">Ksh80/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P010">
+                        <img src="Images/download15.jpg" alt="Fresh Pepper">
+                        <h3>Fresh Pepper</h3>
+                        <div class="price">Ksh75/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P011">
+                        <img src="Images/download17.jpg" alt="Fresh Cabbage">
+                        <h3>Fresh Cabbage</h3>
+                        <div class="price">Ksh85/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                     <div class="box" data-product-id="P012">
+                        <img src="Images/download18.jpg" alt="Sweet  Pears">
+                        <h3>Sweet Pears</h3>
+                        <div class="price">Ksh55/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="box" data-product-id="P013">
+                        <img src="Images/download19.jpg" alt="Sweet &Juicy Strawberries">
+                        <h3>Sweet &Juicy Strawberries</h3>
+                        <div class="price">Ksh110/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                      <div class="box" data-product-id="P014">
+                        <img src="Images/download26.jpg" alt="Garlic">
+                        <h3>Garlic</h3>
+                        <div class="price">Ksh55/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                      <div class="box" data-product-id="P015">
+                        <img src="Images/download14.jpg" alt="Cucumber">
+                        <h3>Cucumber</h3>
+                        <div class="price">Ksh105/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                     <div class="box" data-product-id="P016">
+                        <img src="Images/download29.png" alt="Maize">
+                        <h3>Maize</h3>
+                        <div class="price">Ksh95/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                     <div class="box" data-product-id="P017">
+                        <img src="Images/download30.png" alt="Peas">
+                        <h3>Peas</h3>
+                        <div class="price">Ksh85/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                     <div class="box" data-product-id="P018">
+                        <img src="Images/download28.png" alt="Yellow Beans">
+                        <h3>Yellow Beans</h3>
+                        <div class="price">Ksh 115/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                     <div class="box" data-product-id="P019">
+                        <img src="Images/download.jpg" alt="Fresh Watermelon">
+                        <h3>Fresh Watermelon</h3>
+                        <div class="price">Ksh61/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                     <div class="box" data-product-id="P020">
+                        <img src="Images/download16.jpg" alt="Fresh Corriander">
+                        <h3>Fresh Corriander</h3>
+                        <div class="price">Ksh45/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                     <div class="box" data-product-id="P021">
+                        <img src="Images/download13.jpg" alt="Fresh Cauliflower">
+                        <h3>Fresh Cauliflower</h3>
+                        <div class="price">Ksh 100/Kg</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CATEGORIES SECTION -->
+            <section class="categories" id="categories-section">
+                <h1 class="heading">Product <span>Categories</span></h1>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="Images/download25.jpg" alt="category">
+                        <h3>Vegetables</h3>
+                        <p>Upto 45% off</p>
+                        <a href="#" class="btn">Shop Now</a>
+                    </div>
+                    <div class="box">
+                        <img src="Images/download24.jpg" alt="category">
+                        <h3>Fresh Fruits</h3>
+                        <p>Upto 30% off</p>
+                        <a href="#" class="btn">Shop Now</a>
+                    </div>
+                    <div class="box">
+                        <img src="Images/download23.jpg" alt="category">
+                        <h3>Grains</h3>
+                        <p>Upto 25% off</p>
+                        <a href="#" class="btn">Shop Now</a>
+                    </div>
+                </div>
+            </section>
+           
+            <!-- REVIEWS SECTION -->
+            <section class="reviews" id="reviews-section">
+                <h1 class="heading">Customer's <span>Review</span></h1>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="https://placehold.co/150x150/C5E1A5/333?text=User" alt="customer" class="user-img">
+                        <p>The quality of the vegetables is unmatched! So fresh and flavorful. My family has never eaten healthier. Highly recommend Fine Organic.</p>
+                        <h3>Cyprian Paul</h3>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                    <div class="box">
+                        <img src="https://placehold.co/150x150/C5E1A5/333?text=User" alt="customer" class="user-img">
+                        <p>Fast delivery and excellent customer service. I love the weekly subscription box; it's always a delightful surprise. A trustworthy source for organic food.</p>
+                        <h3>Harriet Musyoka</h3>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    </div>
+                </div>
+            </section>
+<!--product verification -->
+   <section class="product-verification" id="product-verification-section">
+  <h1 class="heading">Verify <span>Product</span></h1>
+  <div class="verification-box">
+    <input type="text" id="verification-code" placeholder="Enter Product Code">
+    <button id="verify-btn" class="btn">Verify</button>
+    <p id="verification-result"></p>
+  </div>
+</section>
+
+            <!-- PAYMENT FORM (Initially Hidden) -->
+    <div id="payment-form" class="payment-popup hidden">
+    <div class="payment-content">
+        <h2>Payment Details</h2>
+        <form id="checkout-form">
+            <input type="text" name="card_name" placeholder="Cardholder Name / M-Pesa Name" required>
+            <input type="text" name="card_number" placeholder="Card/M-Pesa Number" required>
+            <input type="text" name="mpesa-pin" placeholder="PIN" required>
+            <div class="payment-buttons">
+                <button type="submit" class="btn proceed-btn">Proceed</button>
+                <button type="button" class="btn cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+  </main>
+</div>
+
+<!-- VIEW 3: STAKEHOLDER PORTAL -->
+<div id="admin-view" class="view">
+  <header class="main-header">
+    <a href="#" class="logo"><i class="fas fa-cogs"></i> Stakeholder Portal</a>
+    <div class="user-info"><span id="user-role-display"></span><a href="#" class="btn logout-btn">Logout</a></div>
+  </header>
+  <main class="portal-main">
+    <div id="admin-view" class="dashboard-view">
+      <h2>Admin Dashboard</h2>
+      <div class="portal-grid">
+        <!-- REGISTER NEW FARMER -->
+        <div class="portal-card">
+          <h3>Register New Farmer</h3>
+          <form id="register-farmer-form">
+            <input type="text" name="farm_name" placeholder="Farm Name" required>
+            <input type="text" name="location" placeholder="Farm Location" required>
+            <input type="text" name="contact" placeholder="Contact Number" required>
+            <input type="email" name="email" placeholder="Farmer's Email" required>
+            <button type="submit" class="btn">Register Farmer</button>
+          </form>
+          <p id="farmer-register-message"  class="success-msg"></p>
+        </div>
+        
+        <div class="portal-card">
+          <h3>Add New Product</h3>
+          <form id="add-product-form">
+            <input type="text" name="name" placeholder="Product Name" required>
+            <input type="text" name="category" placeholder="Category (e.g., Fruit)" required>
+            <input type="number" step="0.01" name="price" placeholder="Price" required>
+            <input type="number" name="stock_quantity" placeholder="Stock Quantity" required>
+            <textarea name="description" placeholder="Product Description"></textarea>
+            <button type="submit" class="btn">Add Product</button>
+            
+          </form>
+        </div>
+        <div class="portal-card">
+          <h3>Farmer Products</h3>
+           <p>View and manage current farmer listings.</p>
+          <button class="btn" id="view-products-btn">View Farmer Products</button>
+          <div id="farmer-products-view" class="portal-content-view hidden">
+              <h4>Current Product Listings</h4>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Stock</th>
+                          <th>Price (Ksh)</th>
+                      </tr>
+                  </thead>
+                  <tbody id="products-table-body">
+                      <!-- Product data will be inserted here by JavaScript -->
+                  </tbody>
+              </table>
+          </div>
+         </div>
+        <div class="portal-card">
+          <h3>Farmer/Consumer Chats</h3>
+          <p>Chat with distributors and consumers.</p>
+           <button class="btn" onclick="toggleMessages()">Open Messages</button>
+        <div id="chat-box" class="chat-box hidden"></div>
+          </div>
+        <!-- DISTRIBUTOR -->
+        <div class="portal-card">
+          <h3>Distributor Coordination</h3>
+          <p>Coordinate logistics and shipments.</p>
+          <button class="btn" onclick="toggleDistributorDetails()">View Farmer Network & Shipments</button>
+            <!-- Container for both sections -->
+        <div id="distributor-details-box" class="hidden">
+         <h4>Farmer Network</h4>
+         <ul id="farmer-network-list"></ul>
+          <h4>Product Shipments</h4>
+         <ul id="shipment-list"></ul>
+         </div>
+     </div>
+
+        <!-- RETAILER -->
+        <div class="portal-card">
+          <h3>Retail Stock Management</h3>
+          <p>Update product listings and inventory.</p>
+           <a href="retailer_listings.php" target="_blank" class="btn">Update Listings</a>
+           <button onclick="window.location.href='index.html'" class="btn-back">Back to Dashboard</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

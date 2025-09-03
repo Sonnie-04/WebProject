@@ -1,0 +1,192 @@
+*{
+    font-family:sans-serif,'poppins';
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+    border:none;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition: all.2s linear;
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top:7rem;
+}
+body{
+    background:white;
+    color:var(--text-dark);
+}
+section{
+    padding:2rem;
+}
+.btn{
+    margin-top:1rem;
+    display:inline-block;
+    padding: .8rem 3rem;
+    font-size:1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color:var(--black);
+    cursor:pointer;
+    background:none;
+}
+.header{
+    position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:1rem 5%;
+background:white;
+box-shadow:var(--box-shadow);
+}
+.header .logo{
+    font-size:1.7rem;
+    font-weight:bolder;
+    color:var(--black);
+}
+.header .logo i{
+    color:var(--gray);
+    font-style:normal;
+}
+.header .navbar{
+    display:flex;
+    gap:1.5rem;
+}
+.header .navbar a{
+    font-size:1.7rem;
+    margin:0 1rem;
+    font-weight:500;
+    color:var(--gray);
+}
+.header .navbar a:hover{
+    color:var(--black);
+}
+.header .icons div{
+    height:4.5rem;
+    width:4.5rem;
+    line-height:4.5rem;
+    border-radius: .5rem;
+    background:gray;
+    color:var(--black);
+    font-size:2rem;
+    margin-right: .3rem;
+    cursor:pointer;
+    text-align:center;
+    transition:color 0.3s ease;
+}
+.header .icons div:hover{
+    background:var(--black);
+    color:black;
+}
+#menu-btn{
+    display:none;
+}
+ 
+.header .search-form{
+    position:absolute;
+    top:110%;
+    right:2rem;
+    width:50rem;
+    height:5rem;
+    background:orange;
+    border-radius: .5rem;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    box-shadow:var(--box-shadow);
+}
+.header .search-form.active{
+   right:2rem;
+   transition: .4s linear; 
+}
+.header .search-form input{
+    height:100%;
+    width:100%;
+    background:none;
+    text-transform: none;
+    font-size:1.6rem;
+    color:var(--black);
+    padding:0 1.5rem;
+}
+.header .search-form label{
+    font-size:2.2rem;
+    padding-right:1.5rem;
+    color:var(--black);
+    cursor:pointer;
+}
+.header .search-form label:hover{
+    color:var(--orange);
+}
+.header .login-form{
+    position:absolute;
+    top:110%;
+    right:2rem;
+    width:30rem;
+    box-shadow:var(--box-shadow);
+    padding:2rem;
+    border-radius: .5rem;
+    background:gray;
+    text-align:center;
+}
+.header .login-form.active{
+    right:2rem;
+    transition: .4s linear;
+}
+.header .login-form h3{
+    font-size:2.5rem;
+    text-transform:uppercase;
+    color:var(--black);
+}
+.header .login-form .box{
+    width:100%;
+    margin: .7rem 0;
+    background:white;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size:1.6rem;
+    color:var(--black);
+    text-transform:none;
+}
+
+.header .login-form p{
+    font-size:1.4rem;
+    padding: .5rem 0;
+    color:var(--light-color);
+}
+.header .login-form p a{
+    color:blue;
+    text-decoration:underline;
+}
+
+.home{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image: url('E:\PROJECT\Images\download20.jpg')no repeat;
+    background-position:center;
+    background-size: cover;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.home .content{
+    text-align:center;
+    width:60rem;
+}
+.home .content .h3{
+    color:black;
+    font-size: .3rem;
+}
+.home .content h3 span{
+    color:orange;
+}
+.home .content p{
+    color:black;
+    font-size:3rem;
+}
